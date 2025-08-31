@@ -16,10 +16,32 @@ const result = window.document.querySelector(".result");
 
 const error = window.document.querySelector(".error");
 
-function convertMoney() {
+const API_URL = "https://api.exchangerate-api.com/v4/latest/";
+async function convertMoney() {
   loading.style.display = "block";
   converterBtn.style.display = "none";
-  console.log("Converte valor");
+
+  try{
+    const response  = await fetch(API_URL + fromCurrency.value);
+    const data = await response.json();
+    const rate = data.rates[toCurrency.value];
+    const convertedValue = (amount.value * rate).toFixed(2);
+
+    convertedAmount.value = convertedValue;
+
+    result.innerHTML = `
+    <div style="font-size: 1.4rem;">
+    ${amount.value} ${fromCurrency.value} = ${convertedAmount.value} ${toCurrency.value}
+    </div>
+    <div style="font-size: 0.9rem; opacity: 0.8; margin-top: 10px">
+    Taxa: 1 ${fromCurrency.value} = ${rate} ${toCurrency.value}
+    </div>
+    `;
+
+  } catch(error) {
+    alert("Falha de servidor");
+  }
+  //console.log("Converte valor");
 }
 
 form.addEventListener("submit", (event) => {
