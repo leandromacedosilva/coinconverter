@@ -140,6 +140,7 @@ label {
     font-size: 1.1rem;
     font-weight: 600;
     border-radius: 12px;
+    display: none;
 }
 
 .error {
@@ -148,4 +149,5 @@ label {
     padding: 15px;
     border-radius: 15px;
     margin-top: 20px;
+    display: none;
 }

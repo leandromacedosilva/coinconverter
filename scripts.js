@@ -20,6 +20,8 @@ const API_URL = "https://api.exchangerate-api.com/v4/latest/";
 async function convertMoney() {
   loading.style.display = "block";
   converterBtn.style.display = "none";
+  error.style.display = "none";
+  result.style.display = "none";
 
   try{
     const response  = await fetch(API_URL + fromCurrency.value);
@@ -28,6 +30,8 @@ async function convertMoney() {
     const convertedValue = (amount.value * rate).toFixed(2);
 
     convertedAmount.value = convertedValue;
+    //error.style.display = "none";
+    result.style.display = "block";
 
     result.innerHTML = `
     <div style="font-size: 1.4rem;">
@@ -38,9 +42,14 @@ async function convertMoney() {
     </div>
     `;
 
-  } catch(error) {
-    alert("Falha de servidor");
+  } catch(err) {
+    console.error(err);
+    error.style.display = "block";
+    error.innerHTML = `Falha ao converter moeda. Tente novamente!`;
+    //alert("Falha de servidor");
   }
+
+  loading.style.display = "none";
   //console.log("Converte valor");
 }
 
