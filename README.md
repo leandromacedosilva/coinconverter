@@ -52,7 +52,7 @@ Este projeto foi criado com foco no desenvolvimento Front-End e organização do
 
 ## 📸 Preview do Projeto
 
-![Preview do Coin Converter](./assets/screen-display-coin-converter.png)
+![Preview do LCommerce](./assets/screen-display-coin-converter.PNG)
 
 ---
 
