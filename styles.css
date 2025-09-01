@@ -38,11 +38,14 @@ body {
 
 .logo-coin {
     margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.1s ease;
 }
 
 .logo-coin i img:hover {
     /*animation: coin 0.5s linear alternate;*/
     transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2));
 }
 
 @keyframes coin {
