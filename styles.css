@@ -18,7 +18,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 52px;
+    gap: 40px;
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -33,6 +33,29 @@ body {
     max-width: 500px;
     text-align: center;
 }
+
+/* lab code */
+
+.logo-coin {
+    margin-bottom: 20px;
+}
+
+.logo-coin i img:hover {
+    /*animation: coin 0.5s linear alternate;*/
+    transform: translateY(-10px) scale(1.03);
+}
+
+@keyframes coin {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    10% {
+        top: 20px;
+    }
+}
+
+/* fim lab code */
 
 h1 {
     color: var(--title-color);
