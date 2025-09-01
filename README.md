@@ -27,6 +27,7 @@ Projeto de Front-End moderno para conversão de moedas, desenvolvido como práti
 ├── styles.css
 ├── README.md
 ├── scripts.js
+└── assets/
 
 ## 🚧 O que falta para funcionar completamente
 
@@ -51,7 +52,7 @@ Este projeto foi criado com foco no desenvolvimento Front-End e organização do
 
 ## 📸 Preview do Projeto
 
-![Preview do LCommerce](./assets/screen-display-coin-converter.png)
+![Preview do Coin Converter](./assets/screen-display-coin-converter.png)
 
 ---
 
